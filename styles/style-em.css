@@ -48,18 +48,6 @@ button:hover {
 input:focus{
     outline: none;
 }
-@media (min-width: 768px) {
-    img.Icon {
-        width: 40px;
-        height: 40px;
-        margin: 16px;
-    }
-    img.IconButton {
-        width: 40px;
-        height: 40px;
-        margin: 16px;
-    }
-}
 
 body {
     font-family: "Roboto Mono", serif;
@@ -87,11 +75,6 @@ body {
     --ButtonColorTurquoise: #73DBE5;
     --ButtonColorBlue: #80B0FF;
     --ButtonColorIndigo: #6F57FF;
-}
-@media (min-width: 768px) {
-    body {
-        padding: 4%;
-    }
 }
 
 header {
@@ -172,30 +155,9 @@ header {
 #HeaderCarousel button:nth-child(6){
     background-color: var(--ButtonColorIndigo);
 }
-@media (min-width: 768px) {
-    header {
-        padding: 2em;
-        gap: 16px;
-    }
-    .HeaderLine {
-        height: 150px;
-    }
-    .HeaderLine:nth-child(1) > :nth-child(1) {
-        display:none;
-    }
-    .HeaderLine:nth-child(n+2) {
-        display:flex;
-    }
-    #HeaderLogo{
-        width: 300px;
-        height: 100px;
-    }
-}
-
 
 main {
     width: 100%;
-    height: 400px;
     backdrop-filter: blur(16px);
 
     box-shadow: inset 4px 0 4px -4px rgba(255,255,255,0.32), inset -4px 0 4px -4px rgba(255,255,255,0.32);
@@ -203,6 +165,7 @@ main {
 
     padding: 16px;
     box-sizing: border-box;
+    display: flex;
 }
 
 footer {
@@ -229,6 +192,7 @@ footer {
     margin-top: 20px;
     align-items: center;
     filter: brightness(0) saturate(100%) invert(70%) sepia(44%) saturate(5423%) hue-rotate(332deg) brightness(97%) contrast(95%);
+    flex-wrap: wrap;
 }
 
 #FooterReseaux *{           /* Taille de mes icones */
@@ -307,7 +271,128 @@ footer {
     border-radius: 25px;
 }
 
+.container{
+    display: flex;
+    background-color: #024A59;
+    width: 600px;
+    /* height: 500px; */
+    justify-content: center;
+    align-items: center;
+    margin: 100px auto 100px auto;
+    padding: 20px;
+    flex-direction: column;
+}
+/* #renseignements{
+    display: flex;
+
+} */
+/* body {
+    background-color: #004d5a;
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+    height: 100vh;
+    margin: 0;
+} */
+/* .container {
+    text-align: center;
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+.tabs {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 70px;
+    width: 100%;
+}
+.tabs button {
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    flex: 1;
+    background-color: #00000000;
+    color: var(--TextColorBright);
+    transition: color 0.25s;
+}
+.tabs button:disabled {
+    text-decoration: underline;
+}
+.tabs button:hover {
+    color: var(--TextColorBrightOrange);
+}
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid #ffffff;
+    background-color: transparent;
+    color: #ffffff;
+    font-size: 16px;
+}
+.form-group input:focus {
+    outline: none;
+    border-bottom: 1px solid #F27241;
+}
+.btn {
+    color: #FFFFFF;
+    background-color:#F27241;
+    padding: 15px;
+    border: none;
+    border-radius: 25px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 50px 0 50px 0;
+}
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 90px;
+    filter: brightness(0) saturate(100%) invert(70%) sepia(44%) saturate(5423%) hue-rotate(332deg) brightness(97%) contrast(95%);
+}
+
 @media (min-width: 768px) {
+    body {
+        padding: 4%;
+    }
+    img.Icon {
+        width: 40px;
+        height: 40px;
+        margin: 16px;
+    }
+    img.IconButton {
+        width: 40px;
+        height: 40px;
+        margin: 16px;
+    }
+    
+    header {
+        padding: 2em;
+        gap: 16px;
+    }
+    .HeaderLine {
+        height: 150px;
+    }
+    .HeaderLine:nth-child(1) > :nth-child(1) {
+        display:none;
+    }
+    .HeaderLine:nth-child(n+2) {
+        display:flex;
+    }
+    #HeaderLogo{
+        width: 300px;
+        height: 100px;
+    }
     #FooterNewsletter{
         width: 1000px;
     }

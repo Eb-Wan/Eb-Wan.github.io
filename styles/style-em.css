@@ -65,10 +65,9 @@ body {
     font-family: "Roboto Mono", serif;
     font-weight: lighter;
     src: url('../fonts/Roboto_Mono/RobotoMono-VariableFont_wght.ttf') format('truetype');
-
     margin: 0;
     padding: 0;
-    background-image: url(../images/living-room-8285278_1920.jpg);
+
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;

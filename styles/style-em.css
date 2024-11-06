@@ -65,10 +65,10 @@ body {
     font-family: "Roboto Mono", sans-serif;
     font-weight: lighter;
     src: url('../fonts/Roboto_Mono/RobotoMono-VariableFont_wght.ttf') format('truetype');
-
     margin: 0;
     padding: 0;
     
+
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;

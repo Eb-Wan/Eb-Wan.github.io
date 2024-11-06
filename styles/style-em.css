@@ -400,7 +400,7 @@ footer {
     #inscription{
         display: block;
     }
-    p{
+    .container p{
         display: none;
     }
 }

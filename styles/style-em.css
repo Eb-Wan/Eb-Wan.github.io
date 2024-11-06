@@ -170,7 +170,6 @@ main {
 
     padding: 16px;
     box-sizing: border-box;
-    display: flex;
 }
 
 
@@ -356,6 +355,128 @@ footer {
     margin-bottom: 80px;
 }
 
+#simpleSearchBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    box-sizing: border-box;
+    margin: 50px auto 80px auto;
+    width: 90%;
+    border-radius: 25px;
+    padding: 10px 16px 10px 16px;
+    box-shadow: inset 4px 0 4px -4px rgba(255,255,255,0.32), inset -4px 0 4px -4px rgba(255,255,255,0.32), 0px 4px 4px 0px rgba(0,0,0,0.16);
+    color: var(--TextColorBright);
+    background-color: var(--BackgroundColorDark);
+}
+#simpleSearchBar > div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+#simpleSearchBar input{
+    flex: 1;
+    background-color: #00000000;
+    border: none;
+    font-size: 20px;
+    color: var(--TextColorBright);
+}
+.CardList {
+    display: grid;
+    overflow-x: scroll;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    width: 100%;
+    margin: auto;
+    gap: 32px;
+    margin-bottom: 100px;
+    background-color: var(--BackgroundColor);
+    padding: 16px;
+    box-sizing: border-box;
+}
+.Card {
+    margin: auto;
+    padding: 16px;
+    border-radius: 25px;
+    box-shadow: inset 4px 0 4px -4px rgba(255,255,255,0.32), inset -4px 0 4px -4px rgba(255,255,255,0.32), 0px 4px 4px 0px rgba(0,0,0,0.16);
+    color: var(--TextColorBright);
+    background-color: var(--BackgroundColor);
+    width: 280px;
+    height: 400px;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+.Card:hover {
+    transition: background-color 0.1s linear;
+    background-color: var(--BackgroundColorDark);
+}
+.CardImgDiv {
+    margin: auto;
+    position: relative;
+    border-radius: 25px;
+    width: 245px;
+    height: 245px;
+    overflow: hidden;
+}
+.CardImgDiv > img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    object-fit: cover;
+    width: 245px;
+    height: 245px;
+}
+.CardImgDiv > p {
+    position: absolute;
+    border-top-left-radius: 25px;
+    padding: 4px;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    width: 80px;
+    background-color: var(--ButtonColorRed);
+    text-align: center;
+}
+.Card > p {
+    margin: 0;
+    margin-bottom: 16px;
+    text-align: center;
+}
+.CardTitre {
+    font-size: 20px;
+    font-weight: bold;
+}
+.trekInfos{
+    display: flex;
+    /* flex-direction: column; */
+    width: 90%;
+    margin: auto auto 70px auto;  
+}
+
+#description div{
+    display: flex;
+    justify-content: space-between;
+    margin: 50px;
+
+}
+#description > *{
+    margin: 50px;
+}
+#description h2{
+    margin: auto;
+    text-align: center;
+}
+#topologie{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: auto auto 70px auto;
+}
+
+#topologie img{
+    border-radius: 50px;
+}
+
 @media (min-width: 768px) {
     body {
         padding: 4%;
@@ -402,5 +523,27 @@ footer {
     }
     .container p{
         display: none;
+    }
+    #VacationSearchBar {
+        flex-direction: row;
+    }
+    #VacationSearchBar > div{
+        border-left: 1px solid var(--BackgroundColorDark);
+        width: auto;
+        flex: 1;
+    }
+    #VacationSearchBar > div:nth-child(1){
+        border-left: none;
+        flex: 2;
+    }
+    #VacationSearchBar > div:nth-child(2){
+        flex: 2;
+    }
+    .CardList {
+        grid-template-columns: 1fr 1fr 1fr;
+        width: 80%;
+        background-color: none;
+        background-color: #00000000;
+        overflow: hidden;
     }
 }

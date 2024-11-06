@@ -20,7 +20,13 @@ h3 {
 b {
     font-weight: bold;
 }
-
+.TextNormal {
+    font-weight: normal;
+}
+.TextLarge {
+    font-size: 1.5em;
+    font-weight: normal;
+}
 .TextLarger {
     font-size: 2em;
     font-weight: normal;
@@ -330,7 +336,7 @@ footer {
     justify-content: space-between;
     align-items: center;
     box-sizing: border-box;
-    margin: 25px auto 20px auto;
+    margin: 50px auto 80px auto;
     width: 90%;
     border-radius: 25px;
     padding: 10px 16px 10px 16px;
@@ -362,26 +368,64 @@ footer {
 }
 
 .CardList {
-    display: flex;
-    flex-wrap: wrap;
-    width: 60%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 80%;
     margin: auto;
+    gap: 32px;
+    margin-bottom: 100px;
 }
 .Card {
-    display: flex;
+    margin: auto;
+    padding: 16px;
+    border-radius: 25px;
+    box-shadow: inset 4px 0 4px -4px rgba(255,255,255,0.32), inset -4px 0 4px -4px rgba(255,255,255,0.32), 0px 4px 4px 0px rgba(0,0,0,0.16);
+    color: var(--TextColorBright);
+    background-color: var(--BackgroundColor);
     width: 280px;
     height: 400px;
     overflow: hidden;
+    box-sizing: border-box;
+}
+.Card:hover {
+    transition: background-color 0.1s linear;
+    background-color: var(--BackgroundColorDark);
 }
 .CardImgDiv {
+    margin: auto;
     position: relative;
-    border-radius: 25%;
+    border-radius: 25px;
     width: 245px;
     height: 245px;
     overflow: hidden;
 }
 .CardImgDiv > img {
-    position:absolute;
+    position: absolute;
+    left: 0;
+    top: 0;
+    object-fit: cover;
+    width: 245px;
+    height: 245px;
+}
+.CardImgDiv > p {
+    position: absolute;
+    border-top-left-radius: 25px;
+    padding: 4px;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    width: 80px;
+    background-color: var(--ButtonColorRed);
+    text-align: center;
+}
+.Card > p {
+    margin: 0;
+    margin-bottom: 16px;
+    text-align: center;
+}
+.CardTitre {
+    font-size: 20px;
+    font-weight: bold;
 }
 
 
@@ -450,4 +494,9 @@ footer {
     height: 16px;
     border-radius: 50%;
     box-shadow: inset 4px 0 4px -4px rgba(255,255,255,0.32), inset -4px 0 4px -4px rgba(255,255,255,0.32), 0px 4px 4px 0px rgba(0,0,0,0.16);
+}
+
+.Titres {
+    text-align: center;
+    margin: 16px;
 }

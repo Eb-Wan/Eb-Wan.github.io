@@ -6,11 +6,17 @@
     
     <!-- <meta name="description" content=""> -->
     <!-- <meta name="keywords" content="Voyage, Vancances"> -->
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
     <meta name="description" content="Vous recherchez un moyen de faciliter ...">
     <link rel="stylesheet" href="./styles/style-em.css">
     <title>Accueil - Explore More</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=Alegreya:ital,wght@0,400..900;1,400..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+
 </head>
-<body>
+<body style="background-image: url(../images/living-room-8285278_1920.jpg);">
     <header>
         <div class="HeaderLine">
             <div>
@@ -38,7 +44,108 @@
         </div>
     </header>
     <main>
-        Main
+        <div class="Carousel">
+            <div class="CarouselList">
+                <div class="CarouselSlide" id="DecouverteSlide1">
+                    <img src="images/moinzon mountains-1412683_1920.png" alt="Image Carousel">
+                    <div>
+                        <p class="CarouselSlideText">Découvrez</p>
+                        <p class="CarouselSlideMiddleText">Les Hautes Pyrénées</p>
+                        <p class="CarouselSlideText">à Bourgpaumé</p>
+                    </div>
+                </div>
+                <div class="CarouselSlide" id="DecouverteSlide2">
+                    <img src="images/istockphoto-96418914-1024x1024.jpg" alt="Image Carousel">
+                    <div>
+                        <p class="CarouselSlideText">Découvrez</p>
+                        <p class="CarouselSlideMiddleText">Les Alpes</p>
+                        <p class="CarouselSlideText">à Bourgpaumé</p>
+                    </div>
+                </div>
+                <div class="CarouselSlide" id="DecouverteSlide3">
+                    <img src="images/istockphoto-1872852649-1024x1024.jpg" alt="Image Carousel">
+                    <div>
+                        <p class="CarouselSlideText">Découvrez</p>
+                        <p class="CarouselSlideMiddleText">La plage</p>
+                        <p class="CarouselSlideText">à Bourgpaumé</p>
+                    </div>
+                </div>
+                <div class="CarouselSlide" id="DecouverteSlide4">
+                    <img src="images/background-7277773_1920.jpg" alt="Image Carousel">
+                    <div>
+                        <p class="CarouselSlideText">Découvrez</p>
+                        <p class="CarouselSlideMiddleText">La campagne</p>
+                        <p class="CarouselSlideText">à Bourgpaumé</p>
+                    </div>
+                </div>
+            </div>
+            <div class="CarouselButtonList">
+                <a href="#DecouverteSlide1"></a>
+                <a href="#DecouverteSlide2"></a>
+                <a href="#DecouverteSlide3"></a>
+                <a href="#DecouverteSlide4"></a>
+            </div>
+        </div>
+
+        <div id="VacationSearchBar">
+            
+            <div>
+                <img class="Icon" src="./icons/airplane.svg" alt="Icône avion">
+                <p>D'où partez vous?</p>
+            </div>
+            <div>
+                <img class="Icon" src="./icons/geo-alt.svg" alt="Icône localisation">
+                <p>Choisissez votre destination</p>
+            </div>
+            <div>
+                <img class="Icon" src="./icons/calendar4-event.svg" alt="Icône carte">
+                <p>Dates</p>
+            </div>
+            <div>
+                <img class="Icon" src="./icons/person.svg" alt="Icône personne">
+                <p>1 Personne</p>
+            </div>
+
+        </div>
+        <div class="CardList"></div>
+        <div>
+            <div>Nos offres les plus</div>
+            <div>Populaires</div>
+        </div>
+        <div class="Carousel">
+            <div class="CarouselList">
+                <div class="CarouselSlide" id="PopulaireSlide1">
+                    <img src="./images/cliffs-6998764_1920.jpg" alt="Image Carousel">
+                    <div>
+                        <p class="CarouselSlideMiddleText">Le Pay Basque<br>A partir de <span class="CarouselSlideTextLarger">250€</span></p>
+                    </div>
+                </div>
+                <div class="CarouselSlide" id="PopulaireSlide2">
+                    <img src="images/istockphoto-96418914-1024x1024.jpg" alt="Image Carousel">
+                    <div>
+                        <p class="CarouselSlideMiddleText">Le Pay Basque<br>A partir de <span class="CarouselSlideTextLarger">250€</span></p>
+                    </div>
+                </div>
+                <div class="CarouselSlide" id="PopulaireSlide3">
+                    <img src="images/istockphoto-1872852649-1024x1024.jpg" alt="Image Carousel">
+                    <div>
+                        <p class="CarouselSlideMiddleText">Le Pay Basque<br>A partir de <span class="CarouselSlideTextLarger">250€</span></p>
+                    </div>
+                </div>
+                <div class="CarouselSlide" id="PopulaireSlide4">
+                    <img src="images/background-7277773_1920.jpg" alt="Image Carousel">
+                    <div>
+                        <p class="CarouselSlideMiddleText">Le Pay Basque<br>A partir de <span class="CarouselSlideTextLarger">250€</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="CarouselButtonList">
+                <a href="#PopulaireSlide1"></a>
+                <a href="#PopulaireSlide2"></a>
+                <a href="#PopulaireSlide3"></a>
+                <a href="#PopulaireSlide4"></a>
+            </div>
+        </div>
     </main>
     <footer>
         <div id="FooterReseaux">
@@ -94,7 +201,7 @@
             </ul>
         </div>
         <div id="payment">
-            <img src="./images/Capture.PNG" alt="">
+            <img src="./images/" alt="">
         </div>
     </footer>
 </body>

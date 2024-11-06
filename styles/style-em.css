@@ -176,7 +176,6 @@ main {
 
     padding: 16px;
     box-sizing: border-box;
-    display: flex;
 }
 
 
@@ -286,8 +285,7 @@ footer {
 .container{
     display: flex;
     background-color: #024A59;
-    width: 600px;
-    /* height: 500px; */
+    max-width: 600px;
     justify-content: center;
     align-items: center;
     margin: 100px auto 100px auto;
@@ -360,77 +358,6 @@ footer {
 }
 .container p{
     margin-bottom: 80px;
-}
-
-@media (min-width: 768px) {
-    body {
-        padding: 4%;
-    }
-    img.Icon {
-        width: 40px;
-        height: 40px;
-        margin: 16px;
-    }
-    img.IconButton {
-        width: 40px;
-        height: 40px;
-        margin: 16px;
-    }
-    header {
-        padding: 2em;
-        gap: 16px;
-    }
-    .HeaderLine {
-        height: 150px;
-    }
-    .HeaderLine:nth-child(1) > :nth-child(1) {
-        display:none;
-    }
-    .HeaderLine:nth-child(n+2) {
-        display:flex;
-    }
-    #HeaderLogo{
-        width: 300px;
-        height: 100px;
-    }
-    #FooterNewsletter{
-       max-width: 1000px;
-       width: 90%;
-    }
-    #FooterMention{
-        flex-direction: row;
-        align-items: start;
-        max-width: 1000px;
-        width: 90%;
-    }
-    #inscription{
-        display: block;
-    }
-    .countainer p{
-        display: none;
-    }
-    #VacationSearchBar {
-        flex-direction: row;
-    }
-    #VacationSearchBar > div{
-        border-left: 1px solid var(--BackgroundColorDark);
-        width: auto;
-        flex: 1;
-    }
-    #VacationSearchBar > div:nth-child(1){
-        border-left: none;
-        flex: 2;
-    }
-    #VacationSearchBar > div:nth-child(2){
-        flex: 2;
-    }
-    .CardList {
-        grid-template-columns: 1fr 1fr 1fr;
-        width: 80%;
-        background-color: none;
-        background-color: #00000000;
-    }
-    
 }
 
 #VacationSearchBar {
@@ -519,9 +446,6 @@ footer {
     font-size: 20px;
     font-weight: bold;
 }
-
-
-
 .Carousel {
     margin: auto;
     overflow: hidden;
@@ -593,4 +517,75 @@ footer {
 .Titres {
     text-align: center;
     margin: 16px;
+}
+
+@media (min-width: 768px) {
+    body {
+        padding: 4%;
+    }
+    img.Icon {
+        width: 40px;
+        height: 40px;
+        margin: 16px;
+    }
+    img.IconButton {
+        width: 40px;
+        height: 40px;
+        margin: 16px;
+    }
+    header {
+        padding: 2em;
+        gap: 16px;
+    }
+    .HeaderLine {
+        height: 150px;
+    }
+    .HeaderLine:nth-child(1) > :nth-child(1) {
+        display:none;
+    }
+    .HeaderLine:nth-child(n+2) {
+        display:flex;
+    }
+    #HeaderLogo{
+        width: 300px;
+        height: 100px;
+    }
+    #FooterNewsletter{
+       max-width: 1000px;
+       width: 90%;
+    }
+    #FooterMention{
+        flex-direction: row;
+        align-items: start;
+        max-width: 1000px;
+        width: 90%;
+    }
+    #inscription{
+        display: block;
+    }
+    .container p{
+        display: none;
+    }
+    #VacationSearchBar {
+        flex-direction: row;
+    }
+    #VacationSearchBar > div{
+        border-left: 1px solid var(--BackgroundColorDark);
+        width: auto;
+        flex: 1;
+    }
+    #VacationSearchBar > div:nth-child(1){
+        border-left: none;
+        flex: 2;
+    }
+    #VacationSearchBar > div:nth-child(2){
+        flex: 2;
+    }
+    .CardList {
+        grid-template-columns: 1fr 1fr 1fr;
+        width: 80%;
+        background-color: none;
+        background-color: #00000000;
+    }
+    
 }

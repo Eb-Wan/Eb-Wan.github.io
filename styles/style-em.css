@@ -360,6 +360,64 @@ footer {
     margin-bottom: 80px;
 }
 
+#simpleSearchBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    box-sizing: border-box;
+    margin: 50px auto 80px auto;
+    width: 90%;
+    border-radius: 25px;
+    padding: 10px 16px 10px 16px;
+    box-shadow: inset 4px 0 4px -4px rgba(255,255,255,0.32), inset -4px 0 4px -4px rgba(255,255,255,0.32), 0px 4px 4px 0px rgba(0,0,0,0.16);
+    color: var(--TextColorBright);
+    background-color: var(--BackgroundColorDark);
+}
+#simpleSearchBar > div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+#simpleSearchBar input{
+    flex: 1;
+    background-color: #00000000;
+    border: none;
+    font-size: 20px;
+    color: var(--TextColorBright);
+}
+.trekInfos{
+    display: flex;
+    /* flex-direction: column; */
+    width: 90%;
+    margin: auto auto 70px auto;  
+}
+
+#description div{
+    display: flex;
+    justify-content: space-between;
+    margin: 50px;
+
+}
+#description > *{
+    margin: 50px;
+}
+#description h2{
+    margin: auto;
+    text-align: center;
+}
+#topologie{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: auto auto 70px auto;
+}
+
+#topologie img{
+    border-radius: 50px;
+}
+
 #VacationSearchBar {
     display: flex;
     justify-content: space-between;

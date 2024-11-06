@@ -335,6 +335,7 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-direction: column;
     box-sizing: border-box;
     margin: 50px auto 80px auto;
     width: 90%;
@@ -348,32 +349,21 @@ footer {
     display: flex;
     justify-content: start;
     align-items: center;
-    border-left: 1px solid var(--BackgroundColorDark);
-    flex: 1;
-}
-#VacationSearchBar > div:nth-child(1){
-    border-left: none;
-    flex: 2;
-}
-#VacationSearchBar > div:nth-child(2){
-    flex: 2;
+    width: 100%;
 }
 
-#VacationSearchBar > div{
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    border-left: 1px solid var(--BackgroundColorDark);
-    flex: 1;
-}
 
 .CardList {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    width: 80%;
+    overflow-x: scroll;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    width: 100%;
     margin: auto;
     gap: 32px;
     margin-bottom: 100px;
+    background-color: var(--BackgroundColor);
+    padding: 16px;
+    box-sizing: border-box;
 }
 .Card {
     margin: auto;
@@ -428,6 +418,30 @@ footer {
     font-weight: bold;
 }
 
+@media (min-width: 768px) {
+    #VacationSearchBar {
+        flex-direction: row;
+    }
+    #VacationSearchBar > div{
+        border-left: 1px solid var(--BackgroundColorDark);
+        width: auto;
+        flex: 1;
+    }
+    #VacationSearchBar > div:nth-child(1){
+        border-left: none;
+        flex: 2;
+    }
+    #VacationSearchBar > div:nth-child(2){
+        flex: 2;
+    }
+    .CardList {
+        grid-template-columns: 1fr 1fr 1fr;
+        width: 80%;
+        background-color: none;
+        background-color: #00000000;
+    }
+    
+}
 
 .Carousel {
     margin: auto;

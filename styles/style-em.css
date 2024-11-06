@@ -586,6 +586,7 @@ footer {
         width: 80%;
         background-color: none;
         background-color: #00000000;
+        overflow: hidden;
     }
     
 }

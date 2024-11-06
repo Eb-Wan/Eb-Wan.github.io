@@ -53,18 +53,6 @@ button:hover {
 input:focus{
     outline: none;
 }
-@media (min-width: 768px) {
-    img.Icon {
-        width: 40px;
-        height: 40px;
-        margin: 16px;
-    }
-    img.IconButton {
-        width: 40px;
-        height: 40px;
-        margin: 16px;
-    }
-}
 
 body {
     font-family: "Roboto Mono", sans-serif;
@@ -94,11 +82,6 @@ body {
     --ButtonColorTurquoise: #73DBE5;
     --ButtonColorBlue: #80B0FF;
     --ButtonColorIndigo: #6F57FF;
-}
-@media (min-width: 768px) {
-    body {
-        padding: 4%;
-    }
 }
 
 header {
@@ -177,26 +160,6 @@ header {
 #HeaderCarousel button:nth-child(6){
     background-color: var(--ButtonColorIndigo);
 }
-@media (min-width: 768px) {
-    header {
-        padding: 2em;
-        gap: 16px;
-    }
-    .HeaderLine {
-        height: 150px;
-    }
-    .HeaderLine:nth-child(1) > :nth-child(1) {
-        display:none;
-    }
-    .HeaderLine:nth-child(n+2) {
-        display:flex;
-    }
-    #HeaderLogo{
-        width: 300px;
-        height: 100px;
-    }
-}
-
 
 main {
     width: 100%;
@@ -207,6 +170,7 @@ main {
 
     padding: 16px;
     box-sizing: border-box;
+    display: flex;
 }
 
 
@@ -234,6 +198,7 @@ footer {
     margin-top: 20px;
     align-items: center;
     filter: brightness(0) saturate(100%) invert(70%) sepia(44%) saturate(5423%) hue-rotate(332deg) brightness(97%) contrast(95%);
+    flex-wrap: wrap;
 }
 
 #FooterReseaux *{           /* Taille de mes icones */
@@ -312,7 +277,116 @@ footer {
     border-radius: 25px;
 }
 
+.container{
+    display: flex;
+    background-color: #024A59;
+    width: 600px;
+    /* height: 500px; */
+    justify-content: center;
+    align-items: center;
+    margin: 100px auto 100px auto;
+    padding: 20px;
+    flex-direction: column;
+}
+.tabs {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 70px;
+    width: 100%;
+}
+.tabs button {
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    flex: 1;
+    background-color: #00000000;
+    color: var(--TextColorBright);
+    transition: color 0.25s;
+}
+.tabs button:disabled {
+    text-decoration: underline;
+}
+.tabs button:hover {
+    color: var(--TextColorBrightOrange);
+}
+#inscription{
+    display: none;
+}
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid #ffffff;
+    background-color: transparent;
+    color: #ffffff;
+    font-size: 16px;
+}
+.form-group input:focus {
+    outline: none;
+    border-bottom: 1px solid #F27241;
+}
+.btn {
+    color: #FFFFFF;
+    background-color:#F27241;
+    padding: 15px;
+    border: none;
+    border-radius: 25px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 50px 0 20px 0;
+}
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 90px;
+    filter: brightness(0) saturate(100%) invert(70%) sepia(44%) saturate(5423%) hue-rotate(332deg) brightness(97%) contrast(95%);
+    margin-bottom: 30px;
+}
+.container p{
+    margin-bottom: 80px;
+}
+
 @media (min-width: 768px) {
+    body {
+        padding: 4%;
+    }
+    img.Icon {
+        width: 40px;
+        height: 40px;
+        margin: 16px;
+    }
+    img.IconButton {
+        width: 40px;
+        height: 40px;
+        margin: 16px;
+    }
+    header {
+        padding: 2em;
+        gap: 16px;
+    }
+    .HeaderLine {
+        height: 150px;
+    }
+    .HeaderLine:nth-child(1) > :nth-child(1) {
+        display:none;
+    }
+    .HeaderLine:nth-child(n+2) {
+        display:flex;
+    }
+    #HeaderLogo{
+        width: 300px;
+        height: 100px;
+    }
     #FooterNewsletter{
        max-width: 1000px;
        width: 90%;
@@ -323,131 +397,10 @@ footer {
         max-width: 1000px;
         width: 90%;
     }
-}
-
-#VacationSearchBar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-sizing: border-box;
-    margin: 25px auto 20px auto;
-    width: 90%;
-    border-radius: 25px;
-    padding: 10px 16px 10px 16px;
-    box-shadow: inset 4px 0 4px -4px rgba(255,255,255,0.32), inset -4px 0 4px -4px rgba(255,255,255,0.32), 0px 4px 4px 0px rgba(0,0,0,0.16);
-    color: var(--TextColorBright);
-    background-color: var(--BackgroundColor);
-}
-#VacationSearchBar > div{
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    border-left: 1px solid var(--BackgroundColorDark);
-    flex: 1;
-}
-#VacationSearchBar > div:nth-child(1){
-    border-left: none;
-    flex: 2;
-}
-#VacationSearchBar > div:nth-child(2){
-    flex: 2;
-}
-
-#VacationSearchBar > div{
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    border-left: 1px solid var(--BackgroundColorDark);
-    flex: 1;
-}
-
-.CardList {
-    display: flex;
-    flex-wrap: wrap;
-    width: 60%;
-    margin: auto;
-}
-.Card {
-    display: flex;
-    width: 280px;
-    height: 400px;
-    overflow: hidden;
-}
-.CardImgDiv {
-    position: relative;
-    border-radius: 25%;
-    width: 245px;
-    height: 245px;
-    overflow: hidden;
-}
-.CardImgDiv > img {
-    position:absolute;
-}
-
-
-.Carousel {
-    margin: auto;
-    overflow: hidden;
-    width: 90%;
-    position: relative;
-}
-.CarouselList {
-    display: flex;
-    overflow-x: scroll;
-    scrollbar-width: none;
-    scroll-snap-type: x mandatory;
-
-    scroll-behavior: smooth;
-}
-.CarouselSlide {
-    flex-shrink: 0;
-    width: 100%;
-    height: 500px;
-    position: relative;
-}
-.CarouselSlide > img {
-    width: 100%;
-    height: 96%;
-    object-fit: cover;
-}
-.CarouselSlide > div {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-}
-.CarouselSlideText {
-    font-weight: bold;
-    text-shadow: rgba(0,0,0,0.16) 1px 1px 2px;
-    color: var(--TextColorBrightOrange);
-}
-.CarouselSlideMiddleText {
-    background-color: var(--BackgroundColorDark);
-    border-radius: 25px;
-    padding: 10px 32px 10px 32px;
-    box-shadow: inset 4px 0 4px -4px rgba(255,255,255,0.32), inset -4px 0 4px -4px rgba(255,255,255,0.32), 0px 4px 4px 0px rgba(0,0,0,0.16);
-    color: var(--TextColorBright);
-}
-.CarouselButtonList {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    position: absolute;
-    bottom: 16px;
-    left: 0;
-}
-.CarouselButtonList > a {
-    background-color: var(--TextColorBright);
-    margin: 16px;
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    box-shadow: inset 4px 0 4px -4px rgba(255,255,255,0.32), inset -4px 0 4px -4px rgba(255,255,255,0.32), 0px 4px 4px 0px rgba(0,0,0,0.16);
+    #inscription{
+        display: block;
+    }
+    p{
+        display: none;
+    }
 }

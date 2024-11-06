@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="./styles/style-em.css">
     <title>Accueil - Explore More</title>
 </head>
-<body style="background-image: url(../images/living-room-8285278_1920.jpg);">
+<body style="background-image: url(../images/login.png);">
     <header>
         <div class="HeaderLine">
             <div>
@@ -22,7 +22,7 @@
                 <img src="./icons/person.svg" alt="Icône Compte" class="IconButton">
             </div>
         </div>
-        <div class="HeaderLine">
+        <!-- <div class="HeaderLine">
             <div class="HeaderLargeTitle">Découvrez une nouvelle façon de voyager</div>
             <div class="HeaderSubTitle">Ne vous éparpillez pas, tout est là.</div>
         </div>
@@ -35,10 +35,43 @@
                 <button>Sur mesure <img src="./icons/rulers.svg" alt="Icône Sur mesure" class="Icon"></button>
                 <button>Transport <img src="./icons/train-front.svg" alt="Icône Transport" class="Icon"></button>
             </div>
-        </div>
+        </div> -->
     </header>
     <main>
-        Main
+        <!-- <div class="container"> -->
+            <!-- <button>CONNEXION</button>  chercher la regle qui va me permettre de la ligne orange en dessous du button connexion ou inscription d'apparaitre qd on clique dessus -->
+            <!-- <button>INSCRIPTION</button>
+            <div id="renseignements">
+                <input type="email" placeholder="Email">
+            </div>
+            <div>
+                <input type="password" placeholder="Mot de passe">
+            
+                <input type="submit" value="Connexion">
+                <a href="#">Mot de passe oublié</a>
+            </div>
+        </div> -->
+        <div class="container">
+            <div class="tabs">
+                <button disabled>CONNEXION</button>
+                <button id="inscription">INSCRIPTION</button>
+            </div>
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="email" id="username">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password">
+            </div>
+            <!-- <input type="checkbox" label> -->
+            <button class="btn">CONNEXION</button>
+            <p><i>S'inscrire</i></p>
+            <div class="social-icons">
+                <img width="35px" height="35px" src="./icons/google.svg" alt="logo connexion google">
+                <img width="35px" height="35px" src="./icons/facebook.svg" alt="logo connexion facebook">
+            </div>
+        </div>
     </main>
     <footer>
         <div id="FooterReseaux">
@@ -94,7 +127,7 @@
             </ul>
         </div>
         <div id="payment">
-            <img src="./images/Capture.PNG" alt="">
+            <img src="./images/Capture.PNG" alt="Moyens de paiements utilisables sur le site">
         </div>
     </footer>
 </body>

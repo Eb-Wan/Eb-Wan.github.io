@@ -282,24 +282,6 @@ footer {
     padding: 20px;
     flex-direction: column;
 }
-/* #renseignements{
-    display: flex;
-
-} */
-/* body {
-    background-color: #004d5a;
-    font-family: Arial, sans-serif;
-    color: #ffffff;
-    height: 100vh;
-    margin: 0;
-} */
-/* .container {
-    text-align: center;
-    width: 400px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-} */
 .tabs {
     display: flex;
     justify-content: space-between;
@@ -320,6 +302,9 @@ footer {
 }
 .tabs button:hover {
     color: var(--TextColorBrightOrange);
+}
+#inscription{
+    display: none;
 }
 .form-group {
     margin-bottom: 20px;
@@ -352,13 +337,17 @@ footer {
     font-size: 18px;
     font-weight: bold;
     cursor: pointer;
-    margin: 50px 0 50px 0;
+    margin: 50px 0 20px 0;
 }
 .social-icons {
     display: flex;
     justify-content: center;
     gap: 90px;
     filter: brightness(0) saturate(100%) invert(70%) sepia(44%) saturate(5423%) hue-rotate(332deg) brightness(97%) contrast(95%);
+    margin-bottom: 30px;
+}
+.container p{
+    margin-bottom: 80px;
 }
 
 @media (min-width: 768px) {
@@ -375,7 +364,6 @@ footer {
         height: 40px;
         margin: 16px;
     }
-    
     header {
         padding: 2em;
         gap: 16px;
@@ -399,6 +387,12 @@ footer {
     #FooterMention{
         flex-direction: row;
         align-items: start;
-        width: 1000px;
+        max-width: 1000px;
+    }
+    #inscription{
+        display: block;
+    }
+    p{
+        display: none;
     }
 }

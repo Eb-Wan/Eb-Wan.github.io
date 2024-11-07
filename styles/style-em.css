@@ -17,11 +17,19 @@ h2 {
 h3 {
     font-size: 20px;
 }
+a.ButtonLink {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+p {
+    font-weight: normal;
+}
 b {
     font-weight: bold;
 }
 .TextNormal {
-    font-weight: normal;
+    font-weight: bold;
 }
 .TextLarge {
     font-size: 1.5em;
@@ -69,7 +77,7 @@ input:focus{
 
 body {
     font-family: "Roboto Mono", sans-serif;
-    font-weight: normal;
+    font-weight: lighter;
     src: url('../fonts/Roboto_Mono/RobotoMono-VariableFont_wght.ttf') format('truetype');
     margin: 0;
     padding: 0;
@@ -164,7 +172,7 @@ header {
 #HeaderCarousel button:nth-child(3){
     background-color: var(--ButtonColorGreen);
 }
-#HeaderCarousel button:nth-child(4){
+#HeaderCarousel a:nth-child(4) button{
     background-color: var(--ButtonColorTurquoise);
 }
 #HeaderCarousel button:nth-child(5){

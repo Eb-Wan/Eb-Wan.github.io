@@ -47,6 +47,13 @@ img.IconButton {
 img.IconButton:hover {
     filter: brightness(0) saturate(100%) invert(80%) sepia(0%) saturate(381%) hue-rotate(224deg) brightness(87%) contrast(86%);
 }
+img.iconOrange{
+    filter: brightness(0) saturate(100%) invert(70%) sepia(44%) saturate(5423%) hue-rotate(332deg) brightness(97%) contrast(95%);
+    width: 40px;
+    height: 40px;
+    margin: auto;
+    display: block;
+}
 button {
     border-radius: 50px;
     height: 60px;
@@ -464,8 +471,6 @@ footer {
     align-items: center;
     width: 100%;
 }
-
-
 .CardList {
     display: grid;
     overflow-x: scroll;
@@ -473,7 +478,6 @@ footer {
     width: 100%;
     margin: auto;
     gap: 32px;
-    margin-bottom: 100px;
     background-color: var(--BackgroundColor);
     padding: 16px;
     box-sizing: border-box;
@@ -595,12 +599,27 @@ footer {
     height: 16px;
     border-radius: 50%;
     box-shadow: inset 4px 0 4px -4px rgba(255,255,255,0.32), inset -4px 0 4px -4px rgba(255,255,255,0.32), 0px 4px 4px 0px rgba(0,0,0,0.16);
-    
 }
 
 .Titres {
     text-align: center;
     margin: 16px;
+}
+#PageButtons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+}
+#PageButtons button{
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    border: none;
+    margin: 10px;
+    background-color: var(--BackgroundColorBlue);
+    color: var(--TextColorBrightOrange);
+    font-size: 20px;
 }
 
 @media (min-width: 768px) {

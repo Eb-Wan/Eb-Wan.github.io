@@ -62,7 +62,7 @@ input:focus{
 
 body {
     font-family: "Roboto Mono", sans-serif;
-    font-weight: lighter;
+    font-weight: normal;
     src: url('../fonts/Roboto_Mono/RobotoMono-VariableFont_wght.ttf') format('truetype');
     margin: 0;
     padding: 0;
@@ -172,7 +172,7 @@ main {
     backdrop-filter: blur(16px);
 
     box-shadow: inset 4px 0 4px -4px rgba(255,255,255,0.32), inset -4px 0 4px -4px rgba(255,255,255,0.32);
-    background-color: var(--BackgroundColor);
+    background-color: var(--BackgroundColorDark);
 
     padding: 16px;
     box-sizing: border-box;
@@ -393,7 +393,8 @@ footer {
     flex-direction: column;
     box-sizing: border-box;
     margin: 50px auto 80px auto;
-    width: 90%;
+    width: 100%;
+    max-width: 1024px;
     border-radius: 25px;
     padding: 10px 16px 10px 16px;
     box-shadow: inset 4px 0 4px -4px rgba(255,255,255,0.32), inset -4px 0 4px -4px rgba(255,255,255,0.32), 0px 4px 4px 0px rgba(0,0,0,0.16);
@@ -415,24 +416,33 @@ footer {
 }
 .trekInfos{
     display: flex;
-    /* flex-direction: column; */
-    width: 90%;
+    flex-direction: column;
+    width: 100%;
     margin: auto auto 70px auto;  
 }
 
-#description div{
-    display: flex;
-    justify-content: space-between;
-    margin: 50px;
-
+.alltrails{
+    align-self: center;
+    width: 400px;
+    height: 400px;
+    margin-bottom: 32px;
 }
-#description > *{
-    margin: 50px;
+#description {
+    flex: 1;
 }
 #description h2{
     margin: auto;
+    margin-bottom: 16px;
     text-align: center;
 }
+#description div{
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    gap: 8px;
+}
+
+
 #topologie{
     display: flex;
     flex-direction: column;
@@ -603,6 +613,29 @@ footer {
     margin: 16px;
 }
 
+#RandoResultList {
+    margin: auto;
+    margin-bottom: 80px;
+    width: 100%;
+    max-width: 1024px;
+}
+
+#RandoResultList summary{
+    background-color: var(--BackgroundColorDark);
+    box-shadow: inset 4px 0 4px -4px rgba(255,255,255,0.32), inset -4px 0 4px -4px rgba(255,255,255,0.32), 0px 4px 4px 0px rgba(0,0,0,0.16);
+    padding: 16px;
+    border-radius: 25px;
+}
+#RandoResultList[open] summary{
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+#RandoResultList .CardList{
+    background-color: var(--BackgroundColor);
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
 @media (min-width: 768px) {
     body {
         padding: 4%;
@@ -666,8 +699,33 @@ footer {
         flex: 2;
     }
     .CardList {
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+        background-color: none;
+        background-color: #00000000;
+        overflow: hidden;
+    }
+    .trekInfos {
+        flex-direction: row;
+        width: 100%;
+        max-width: 1024px;
+    }
+    .alltrails {
+        width: 50%;
+        height: 500px;
+    }
+    .trekInfos > *{
+        margin-bottom: 50px;
+        margin: 16px;
+        width: 50%;
+    }
+    
+}
+@media (min-width: 1024px) {
+    .CardList {
         grid-template-columns: 1fr 1fr 1fr;
-        width: 80%;
+        width: 100%;
+        max-width: 1024px;
         background-color: none;
         background-color: #00000000;
         overflow: hidden;
